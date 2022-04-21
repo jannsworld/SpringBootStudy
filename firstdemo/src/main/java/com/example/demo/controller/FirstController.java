@@ -11,5 +11,11 @@ public class FirstController {
 		
 		return "home";
 	}
+	
+	@GetMapping("/member/add")
+	public String memberMethod() {
+		
+		return "member/add";
+	}
 
 }
