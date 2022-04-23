@@ -24,9 +24,12 @@ public class SampleController1 {
 	}
 	
 	@GetMapping("/user/userid")
-	public String userId(@RequestParam("userid") String uid, Model model) {
-		
-		model.addAttribute("userid", uid);
+	public String userId(@RequestParam( value = "userid", required=false) String userid, Model model) {
+/*
+ * required = true 옵션 디폴트며, 이 때는 반드시 userid 파라미터 값 넣어 HTTP 요청되어야 하고,
+ * 	required = false 지정하면, 값이 필수가 아니기에 입력되지 않더라도 에러 발생하지 않음
+ */
+		model.addAttribute("userid", userid);
 		
 		return "/user/userinfo"; // userinfo.html
 	}
