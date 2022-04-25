@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmls:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>SampleController1</title>
@@ -10,6 +10,8 @@
 
 	<h1 th:text="'반갑습니다'+ ${ username } +'님' " >Guest</h1>
 	<h1 th:text="${ userid }">유저아이디</h1>
+	<h1 th:text="${ useremail }">유저이메일</h1>
+	<h1 th:text="${ userhp }">유저핸드폰</h1>
 
 </body>
 </html>
