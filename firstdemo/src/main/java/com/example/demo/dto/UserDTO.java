@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+// 변수만 만들어주고, 나머지 getter, setter, toString 자동으로 생성 -> 전달 값들 객체화
 public class UserDTO {
 	
 	private String userName;

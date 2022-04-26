@@ -21,7 +21,7 @@ public class SampleController3 {
 		System.out.println(userDTO.getUserId());
 		System.out.println(userDTO.getUserPhone());
 		
-		model.addAttribute("heading", "Spring Boot");
+		model.addAttribute("heading", "DTO 객체 전달 값");
 
 		return "/post/SampleController3View";
 	}
