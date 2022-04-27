@@ -23,7 +23,7 @@ public class SampleController4 {
 	@PostMapping("/SampleController4View")
 	public String userForm(UserDTO userDTO, Model model) {
 
-		// userDTO 객체 통해ㄴ 출력
+		// userDTO 객체 통해 출력
 		System.out.println(userDTO.getUserName());
 		System.out.println(userDTO.getUserId());
 		System.out.println(userDTO.getUserPhone());
