@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SampleController5View</title>
+</head>
+	<body>
+	
+		<h1>Book Page</h1>
+		
+		<div>
+		<h3 th:text="${heading}"> 제목 </h3>
+		<p>사용자 입력한 책 정보</p>
+			<table cellpadding=10 border=1>
+				<tr> 
+					<td>Title</td>
+					<td>
+						<input type="text" th:value="${bookDTO.getTitle()}" readonly>
+					</td>
+				</tr>
+				
+				<tr> 
+					<td>Author</td>
+					<td>
+						<input type="text" th:value="${bookDTO.getAuthor()}" readonly>
+					</td>
+				</tr>
+				
+				<tr> 
+					<td>Publisher</td>
+					<td>
+						<input type="text" th:value="${bookDTO.getPublisher()}" readonly>
+					</td>
+				</tr>
+				
+				<tr> 
+					<td>PublishingDate</td>
+					<td>
+						<input type="text" th:value="${bookDTO.getPublishingDate()}" readonly>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+	</body>
+</html>
