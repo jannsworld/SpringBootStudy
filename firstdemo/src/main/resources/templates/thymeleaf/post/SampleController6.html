@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>타임리프 출력</title>
+</head>
+	<body>
+	<h2>Thymeleaf Board Table</h2>
+	
+		<table>
+			<thead>
+				<tr>
+					<th>Number</th>
+					<th>Title</th>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 단일 객체  -->
+				<tr th:object="${boardDTO}">
+					<td th:text="*{num}"></td>
+					<td th:text="*{btitle}"></td>
+					<td th:text="*{bname}"></td>
+				</tr>
+				
+				<!-- 복수 객체  -->
+				<tr th:each="b: ${bList}">
+					<td th:text="${b.num}">1</td>
+					<td th:text="${b.btitle}">빨간색</td>
+					<td th:text="${b.bname}">갑</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
