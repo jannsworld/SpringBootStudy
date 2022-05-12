@@ -19,6 +19,7 @@ import com.zaxxer.hikari.HikariDataSource;
  * @Configuration : 스프링부트 환결성정 클래스임을 명시, 자동으로 빈 등록
  * 이 애너테이션 붙으면, @ComponentScan 스캔할 때, 이 클래스에 @Bean 지정한 모든 빈들도 IoC 컨테이너 등록
  */
+
 @Configuration
 @PropertySource("classpath:/application.properties")
 public class DBConfigration {
@@ -47,6 +48,7 @@ public class DBConfigration {
 	 * 히카리풀 뒤에 숫자가 붙어 나옴 : HikariDataSource(HikiariPool-1)
 	 * 이 단계를 통해 히카리CP(Connection Pool) 연결 완성
 	 */
+	@Bean
 	public DataSource dataSource() {
 		
 		DataSource dataSource = new HikariDataSource(hikariConfig());
@@ -80,7 +82,6 @@ public class DBConfigration {
 		 * 애플리케이션이 스타트해서 끝나는 그 순간까지 이 애플리케이션에서 필요한 모든 자원들을 모아놓고 관리
 		 */
 		factoryBean.setTypeAliasesPackage("com.testboard2.dto");
-
 		
 		return factoryBean.getObject();
 	}
@@ -93,7 +94,6 @@ public class DBConfigration {
 	 */
 	@Bean
 	public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) throws Exception{
-		
 		
 		return new SqlSessionTemplate(sqlSessionFactory);
 	}
