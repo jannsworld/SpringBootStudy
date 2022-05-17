@@ -3,7 +3,6 @@ package com.testboard2.dto;
 public class MemberDTO {
 
 	// idx
-	
 	private String name;
 	private String id;
 	private String phone;
@@ -17,7 +16,7 @@ public class MemberDTO {
 		this.id = id;
 		this.phone = phone;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
