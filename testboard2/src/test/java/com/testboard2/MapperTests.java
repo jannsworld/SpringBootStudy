@@ -18,9 +18,9 @@ public class MapperTests {
 		
 		MemberDTO m1 = new MemberDTO();
 		
-		m1.setName("장발장");
-		m1.setId("mr.Jang");
-		m1.setPhone("010-897-1234");
+		m1.setName("장발순");
+		m1.setId("ms.Jang");
+		m1.setPhone("02-000-1234");
 		
 		System.out.println(m1);
 		memberMapper.insertMember(m1);

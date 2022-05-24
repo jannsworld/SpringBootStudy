@@ -5,13 +5,13 @@
 
 	<insert id="insertMember" parameterType="MemberDTO">
 	INSERT INTO member(
-		name,
-		id,
-		phone
+		name
+		, id
+		, phone
 	) VALUES (
-		#{name},
-		#{id},
-		#{phone}
+		#{name}
+		, #{id}
+		, #{phone}
 	);
 	</insert>
 
