@@ -9,14 +9,22 @@ import com.testboard2.mapper.MemberMapper;
 @Service
 public class MemberServiceImpl implements MemberService {
 
+	//DI
 	@Autowired
 	private MemberMapper memberMapper;
 	
+	//Insert
 	@Override
 	public void insertMember(MemberDTO memberDTO) {
 		
 		memberMapper.insertMember(memberDTO);
-
+	}	
 		
+	//SelectMemberOne	
+	@Override
+	public MemberDTO getMemberOne(int num) {
+		
+		return memberMapper.selectMemberOne(num);
 	}
+
 }

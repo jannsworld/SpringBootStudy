@@ -8,14 +8,14 @@ public class MemberDTO {
 	private String phone;
 
 	
-	public MemberDTO() {}
-
-	public MemberDTO(String name, String id, String phone) {
-		super();
-		this.name = name;
-		this.id = id;
-		this.phone = phone;
-	}
+//	public MemberDTO() {}
+//
+//	public MemberDTO(String name, String id, String phone) {
+//		super();
+//		this.name = name;
+//		this.id = id;
+//		this.phone = phone;
+//	}
 	
 	public String getName() {
 		return name;

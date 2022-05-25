@@ -18,20 +18,20 @@
 	</head>
 <body>
 
-<h1> Member Registration Form </h1>
+<h1>Member <span th:text="${formTitle}">Registration</span> Form</h1>
 
-	<form action="/member/memberWriteOk" method="POST">
+	<form action="#" th:action="/member/memberWriteOk" th:object="${memberDTO}" method="POST">
 	
 		<label for="name">Name</label>
-		<input type="text" id="name">
+		<input type="text" id="name" name="name" th:field="*{name}">
 		<br>
 		
 		<label for="id">id</label>
-		<input type="text" id="id">
+		<input type="text" id="id" name="id" th:field="*{id}">
 		<br>
 		
 		<label for="phone">phone</label>
-		<input type="text" id="phone">
+		<input type="text" id="phone" name="phone" th:field="*{phone}">
 		<br>
 		
 		<input type="submit" value="Submit">
